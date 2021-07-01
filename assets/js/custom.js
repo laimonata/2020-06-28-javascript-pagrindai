@@ -123,10 +123,28 @@ const duomenys = [
     }
 ];
 
-for(let eile in duomenys) {
-    console.log(duomenys[eile]['vardas'], duomenys[eile]['veisle'], 
-    duomenys[eile]['miestas'], duomenys[eile]['amzius']);
-    
+let html;
+let ending;
+
+for(let indeksas in duomenys) {
+
+    html += '<tr>'; 
+
+    for(let indeksas2 in duomenys[indeksas]) {
+
+        //ending = ', ';
+
+        //if(indeksas2 == 'kiekis')
+
+        //ending = '';
+
+        html += '<td>' + duomenys[indeksas][indeksas2] + '</td> ';
+    }
+
+    html += '</tr>';
+
+    //console.log(eilute);
+
 }
 
 /*for(let i = 0; i < petras.length; i++) {
