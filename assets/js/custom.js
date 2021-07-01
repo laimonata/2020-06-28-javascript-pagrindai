@@ -74,7 +74,6 @@ document.getElementById('reset').addEventListener("click", atnaujinti);
 
 function atnaujinti() {
 
-    document.getElementById("reset").onclick;
     location.reload();
 
 
