@@ -104,41 +104,36 @@ var petras = [
 
 const duomenys = [
     {
-        vardas: "Rokis",
-        veisle: "Vokieciu aviganis",
-        miestas: "Vilnius",
-        amzius: "3"
-    },
-    {
-        vardas: "Milka",
-        veisle: "Foksterjeras",
         miestas: "Kaunas",
-        amzius: "7"
+        adresas: "Jonavos 56",
+        data: "2020-07-01",
+        kiekis: "10"
     },
     {
-        vardas: "Amsius",
-        veisle: "Zanenhundas",
-        miestas: "Alytus",
-        amzius: "5"
+        miestas: "Vilnius",
+        adresas: "Gelezinio vilko 20",
+        data: "2020-07-01",
+        kiekis: "15"
+    },
+    {
+        miestas: "Klaipeda",
+        adresas: "Ligonines 20",
+        data: "2020-07-01",
+        kiekis: "25"
     }
 ];
 
-let html;
-let ending;
+let html = '';
+let ending = '';
 
 for(let indeksas in duomenys) {
 
     html += '<tr>'; 
 
     for(let indeksas2 in duomenys[indeksas]) {
+        
+        html += '<td>' + duomenys[indeksas][indeksas2] + '</td>';
 
-        //ending = ', ';
-
-        //if(indeksas2 == 'kiekis')
-
-        //ending = '';
-
-        html += '<td>' + duomenys[indeksas][indeksas2] + '</td> ';
     }
 
     html += '</tr>';
@@ -147,6 +142,31 @@ for(let indeksas in duomenys) {
 
 }
 
-/*for(let i = 0; i < petras.length; i++) {
-    console.log('Masyvo petras indeksas: ' + petras[i]);
-}*/
+document.getElementById('lentelesVidus').innerHTML += html;
+
+document.getElementById('rodyti').onclick = function() {
+
+    var lentele = document.getElementById('lentele');
+
+    lentele.classList.toggle('show');
+  
+    if( lentele.classList.contains('show') == false ) {
+        document.getElementById('rodyti').innerText = 'Slėpti';
+    } else {   
+        document.getElementById('rodyti').innerText = 'Rodyti';
+    }
+  
+};
+
+ 
+
+var array = [5, 23, 8, 12, 26, 34, 1, 9, 15, 45];
+
+for (var i = 0, sum = 0; i < array.length; sum += array[i++]);
+
+console.log(sum);
+
+console.log (document.getElementById('skaiciuoti').innerHTML );
+
+alert('skaiciuojami skaiciai: ' + array + ' suma ' + sum);
+
