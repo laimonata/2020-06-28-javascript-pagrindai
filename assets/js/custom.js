@@ -168,5 +168,56 @@ console.log(sum);
 
 console.log (document.getElementById('skaiciuoti').innerHTML );
 
-alert('skaiciuojami skaiciai: ' + array + ' suma ' + sum);
+//alert('skaiciuojami skaiciai: ' + array + ' suma ' + sum);
+
+document.getElementById('submit').onclick = function() {
+
+    var el = document.getElementById('pasirinkimas');
+
+    console.log(el.value);
+
+    var tekstas = '';
+
+    switch(el.value) {
+
+        case 'volvo':
+            tekstas = 'Daug mases, daug plieno';
+        break;
+
+        case 'saab':
+            tekstas = 'Svedu masina';
+        break;
+
+        case 'opel':
+            tekstas = 'Stovedamas rudyja';
+        break;
+
+        case 'audi':
+            tekstas = 'Audi neciaudi';
+        break;
+
+        default:
+            tekstas = 'Velniop ta masina';
+    }
+
+   alert(tekstas);
+
+
+}
+
+jQuery(document).ready(function() {
+
+    jQuery('.naujasmygtukas').addClass('klase');
+
+    jQuery('#naujasmygtukas').removeClass('klase');
+
+    jQuery('.naujasmygtukas').click(function() {
+
+        alert('Paspaudimas');
+
+    });
+
+});
+
+
 
