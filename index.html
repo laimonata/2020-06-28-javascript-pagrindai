@@ -4,44 +4,156 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testine Javascript aplikacija</title>
-    <link rel="stylesheet" href="assets/css/custom.css" />
-</head>
-<body>
-    <div id="messages"></div>
-    <input type="number" id="kiekis" value="1" />
-    <button id="kvietejas">Į krepšelį</button>
-    <button id="reset">Atnaujinti</button>
-    <button id="rodyti">Rodyti</button>
-    <button id="skaiciuoti">Skaiciuoti</button>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/CSS/custom.css" />
+  </head>
+  <body>
+    <!-- <div id="valueReturn"></div>
+    <input id="cartValue" type="number" value="1" />
+    <button id="enterValue">To cart</button> -->
+    <div id="siteWrapper">
+      <div id="messages"></div>
+      <input type="number" id="kiekis" value="1" />
+      <button id="kvietejas">Į krepšelį</button>
+      <button id="reset">Reset</button>
+      <div class="table-button">
+        <!-- <input type="button" id="tableToggle" value="Rodyti"> -->
+        <h2>Lenteles duomenys</h2>
+        <button id="tableToggle">Rodyti</button>
+      </div>
+      <table
+        id="asmenineInfo"
+        class="display table-margin"
+        width="100%"
+      ></table>
+      <h3>Siandienos Data</h3>
+      <p id="data"></p>
+      <h4>Skaiciavimas</h4>
+      <button id="skaiciavimas">Rezultatas</button>
+      <div id="rezultatas"></div>
+      <select id="options" name="options">
+        <option value="1">saldytuvas</option>
+        <option value="2">kompiuteris</option>
+        <option value="3">skalbimo masina</option>
+        <option value="4">dujine virykle</option>
+        <option value="5">mikrobangu krosnele</option>
+        <option value="6">indaplove</option>
+      </select>
+      <button id="tikrinti">Tikrinti</button>
+      <button id="naujas-mygtukas" class="naujas-mygtukas">Mygtukas</button>
+      <div id="sandelis"></div>
+      <table id="jLentele" class="lentelesStilius">
+        <thead>
+          <tr>
+            <th>Vardas</th>
+            <th>Pavarde</th>
+            <th>Gimtadienis</th>
+            <th>Lytis</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <table class="lentelesStilius">
+        <thead>
+          <tr>
+            <th>Klientas</th>
+            <th>Kodas</th>
+            <th>Data</th>
+            <th>Produktas</th>
+            <th>Kaina</th>
+            <th>Papildoma informacija</th>
+          </tr>
+          <tr>
+            <td>Adomaviciaus imone</td>
+            <td>1000</td>
+            <td>2020.06.20</td>
+            <td>nesiojamas kompiuteris</td>
+            <td>1499</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>UAB "Kesko Senukai"</td>
+            <td>1001</td>
+            <td>2020.06.21</td>
+            <td>televizorius</td>
+            <td>800</td>
+            <td>Reikalingas pristatymas</td>
+          </tr>
 
-    <table class="lentele" id="lentele">
-      <thead>
-        <th>Miestas</th>
-        <th>Adresas</th>
-        <th>Data</th>
-        <th>Kiekis</th>
-      </thead>
-      <tbody id="lentelesVidus"></tbody>
-    </table>
+          <tr>
+            <td>UAB "Simplea"</td>
+            <td>1002</td>
+            <td>2020.06.22</td>
+            <td>telefonas</td>
+            <td>299</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>UAB "5 kontinentai"</td>
+            <td>1003</td>
+            <td>2020.06.23</td>
+            <td>plansete</td>
+            <td>450</td>
+            <td></td>
+          </tr>
+        </thead>
+      </table>
+      <table id="jTable" class="lentelesStilius">
+        <thead>
+          <tr>
+            <th>Klientas</th>
+            <th>Kodas</th>
+            <th>Data</th>
+            <th>Produktas</th>
+            <th>Kaina</th>
+            <th>Papildoma informacija</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="javascriptTest">Test</button>
+      <div id="javascript-testai"></div>
+      <button id="math2nd">Math2nd</button>
+      <div id="mathResult2nd"></div>
+      <button id="math4th">Math4th</button>
+      <div id="mathResult4th"></div>
+      <button id="math5th">Math5th</button>
+      <div id="mathResult5th"></div>
+      <button id="math6th">Math6th</button>
+      <div id="mathResult6th"></div>
+      <button id="math7th">Math7th</button>      
+      <div id="mathResult7th"></div>
+      <button id="math8th">Math8th</button>
+      <div id="mathResult8th"></div>
+      <button id="math9th">Math9th</button>
+      <div id="mathResult9th"></div>
+      <button id="math10th">Math10th</button>
+      <div id="mathResult10th"></div>
+      <div class="window-percent"></div>
+      <p id="stars"></p>
+      <p id="randomNumbers"></p>
+      <p id="randomNumbers2"></p>
+      <p id="randomNumbers3"></p>
+      <div id="randomNumbers4"></div>
+      <p id="vinys"></p>
+      <div id="7uzduotis"></div>
+      <div class="funkcijuUzdaviniai"></div>
+    </div>
 
-    <h1>Masinos</h1>
-
-   <select id="pasirinkimas">
-		<option value="volvo">Volvo</option>
-		<option value="saab">Saab</option>
-		<option value="opel">Opel</option>
-		<option value="audi">Audi</option>
-    <option value="dviratis">Dviratis</option>
-	  </select>
-
-    <br><br>
-
-    <button id="submit">Submit</button>
-    <button class="naujasmygtukas" id="naujasmygtukas">Naujas</button>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="assets/js/newfile.js"></script>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="assets/JS/custom.js"></script>
+  </body>
 </html>
